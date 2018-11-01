@@ -31,7 +31,7 @@ app.get("/secret",function(req,res){
 });
 
 
-app.get("/campgrounds",function(req,res){
+app.get("/recipees",function(req,res){
     Recipee.find({},function(err,allCampgrounds){
       if(err)
       {
@@ -41,13 +41,13 @@ app.get("/campgrounds",function(req,res){
           res.render("campgrounds",{campgrounds:allCampgrounds});
       }
     });
-    app.get("/campgrounds/landing",function(req,res){
+    app.get("/recipees/landing",function(req,res){
         res.render("landing");
     });
  
 });
 
-app.post("/campgrounds",function(req,res){
+app.post("/recipee",function(req,res){
     var name = req.body.name;
     var image = req.body.image;
     var newCampground = {name : name, image : image};
@@ -62,7 +62,7 @@ app.post("/campgrounds",function(req,res){
 
 }); 
 
-app.get("/campgrounds/new",function(req,res){
+app.get("/recipees/new",function(req,res){
 res.render("new");
 });
 app.get("/login",function(req,res){
