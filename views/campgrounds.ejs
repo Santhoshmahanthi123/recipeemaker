@@ -1,0 +1,42 @@
+<% include partials/header %>
+<div class="container-fluid">
+<header class="jumbotron">
+        <div class="container-fluid">
+        <h1 style="text-align:center">Recipee Manager!</h1>
+        <hr class="my-2">
+        <p>Welcome to the world of recepies...Explore your favourite recepies..!</p>
+        <hr class="my-2">
+        <p><a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Recipee</a> Do you have an Idea..? Please contribute your recepie here!</p>
+        <a href="/campgrounds/landing"> Home!</a>
+
+        </div>
+
+</header>
+<div class="containetr-fluid">
+<div class="row-text-center" style="display:flex; flex-wrap: wrap">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-4 col-md-offset-2">
+                    
+                <div class="img-thumbnail">
+                <img src="<%= campground.image %>">
+                <div class="caption">
+                <h4><%= campground.name %></h4>
+                <a class="btn btn-primary btn-small" href="/campgrounds/landing">Add to Cart</a>
+
+                </div>
+                </div>
+
+            
+           </div>
+            <% }); %>
+            
+        </div>
+        
+            <a href="/"> Go Back!</a>
+            
+        <br>
+      
+        <% include partials/footer %>
+        
+    </div>
+</div> 

@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="container-fluid" style="width: 30%; margin:25px auto;">
+        <div class="jumbotron">
+    
+    <form action="/login">
+        <div class="form-group">
+                <label for="email">Email address:</label>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Enter Your Email">
+                </div>
+                <label for="pwd">Password:</label>
+                <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Enter your password">
+                </div>
+                <label for="cpwd">Confirm Password:</label>
+                <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Please Re-Enter your password">
+                </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> 
+    </div>
+    </div>
+    <% include partials/footer %>
